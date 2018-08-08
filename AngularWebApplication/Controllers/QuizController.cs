@@ -1,16 +1,15 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using TestMakerFreeWebApp.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
+using AngularWebApplication.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
-namespace TestMakerFreeWebApp.Controllers
+namespace AngularWebApplication.Controllers
 {
     [Route("api/[controller]")]
     public class QuizController : Controller
     {
-        #region RESTful conventions methods
         /// <summary>
         /// GET: api/quiz/{id}
         /// Retrieves the Quiz with the given {id}
@@ -68,9 +67,7 @@ namespace TestMakerFreeWebApp.Controllers
         {
             throw new NotImplementedException();
         }
-        #endregion
-
-        #region Attribute-based routing methods
+      
         /// <summary>
         /// GET: api/quiz/latest
         /// Retrieves the {num} latest Quizzes
@@ -153,6 +150,5 @@ namespace TestMakerFreeWebApp.Controllers
                     Formatting = Formatting.Indented
                 });
         }
-        #endregion
     }
 }

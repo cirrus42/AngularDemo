@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using AngularWebApplication.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using TestMakerFreeWebApp.ViewModels;
-using System.Collections.Generic;
 
-namespace TestMakerFreeWebApp.Controllers
+namespace AngularWebApplication.Controllers
 {
     [Route("api/[controller]")]
     public class ResultController : Controller
     {
-        #region RESTful conventions methods
         /// <summary>
         /// Retrieves the Result with the given {id}
         /// </summary>
@@ -50,7 +49,6 @@ namespace TestMakerFreeWebApp.Controllers
         {
             throw new NotImplementedException();
         }
-        #endregion
 
         // GET api/question/all
         [HttpGet("All/{quizId}")]

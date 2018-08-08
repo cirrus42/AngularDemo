@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using AngularWebApplication.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using TestMakerFreeWebApp.ViewModels;
-using System.Collections.Generic;
 
-namespace TestMakerFreeWebApp.Controllers
+namespace AngularWebApplication.Controllers
 {
     [Route("api/[controller]")]
     public class QuestionController : Controller
