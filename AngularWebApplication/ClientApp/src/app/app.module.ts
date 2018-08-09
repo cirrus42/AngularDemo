@@ -7,8 +7,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
+
+import { CounterComponent } from './counter/counter.component';
+
 import { QuizHomeComponent } from './quiz/quiz-home.component';
 import { QuizListComponent } from './quiz/quiz-list.component';
+import Countercomponent = require("./counter/counter.component");
 
 
 @NgModule({
@@ -16,6 +20,7 @@ import { QuizListComponent } from './quiz/quiz-list.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
+    CounterComponent,
     QuizHomeComponent,
     QuizListComponent
   ],
@@ -24,7 +29,7 @@ import { QuizListComponent } from './quiz/quiz-list.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      //{ path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path:'quiz-home', component: QuizHomeComponent}
     ])

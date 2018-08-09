@@ -1,8 +1,44 @@
 <h2>{{title}}</h2>
-<ul class="quizzes">
-  <li *ngFor="let quiz of quizzes"
-      [class.selected]="quiz === selectedQuiz"
-      (click)="onSelect(quiz) ">
+<!--<h3>{{theUrl}}</h3>
+<ul>
+  <li *ngFor="let quiz of quizzes">
     <span>{{quiz.title}}</span>
   </li>
-</ul>
+</ul>-->
+
+
+
+<table *ngIf="forecasts">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Temp. (C)</th>
+    <th>Temp. (F)</th>
+    <th>Summary</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let forecast of forecasts">
+    <td>{{ forecast.dateFormatted }}</td>
+    <td>{{ forecast.temperatureC }}</td>
+    <td>{{ forecast.temperatureF }}</td>
+    <td>{{ forecast.summary }}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+
+<!--<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>-->
+<!--class="quizzes"-->
+
+<!--[class.selected]="quiz === selectedQuiz"
+(click)="onSelect(quiz) "-->
