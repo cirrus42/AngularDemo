@@ -27,12 +27,14 @@
     <None Remove="ClientApp\src\app\interfaces\IQuiz.ts" />
     <None Remove="ClientApp\src\app\interfaces\IWeatherForecast.ts" />
     <None Remove="ClientApp\src\app\quiz\quiz-list.component.ts" />
+    <None Remove="ClientApp\src\app\quiz\quiz.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\interfaces\IWeatherForecast.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\quiz\quiz-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\interfaces\IQuiz.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\quiz\quiz.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

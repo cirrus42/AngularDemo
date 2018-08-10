@@ -12,8 +12,7 @@ import { CounterComponent } from './counter/counter.component';
 
 import { QuizHomeComponent } from './quiz/quiz-home.component';
 import { QuizListComponent } from './quiz/quiz-list.component';
-import Countercomponent = require("./counter/counter.component");
-
+import { QuizComponent } from './quiz/quiz.component'; 
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import Countercomponent = require("./counter/counter.component");
     HomeComponent,
     CounterComponent,
     QuizHomeComponent,
-    QuizListComponent
+    QuizListComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
