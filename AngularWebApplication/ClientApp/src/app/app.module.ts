@@ -29,7 +29,7 @@ import { QuizComponent } from './quiz/quiz.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      //{ path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path:'quiz-home', component: QuizHomeComponent}
     ])
