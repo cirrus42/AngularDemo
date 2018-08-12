@@ -1,5 +1,6 @@
 import { Component, Inject, Input, OnInit} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'quiz-list',
@@ -13,10 +14,12 @@ export class QuizListComponent implements OnInit {
   selectedQuiz: IQuiz;
   quizzes: IQuiz[];
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string,
+    private router: Router) {
   }
 
   ngOnInit() {
+
     console.log("Class " + this.class);
     var url = this.baseUrl + "api/quiz/";
     switch (this.class) {
@@ -42,6 +45,10 @@ export class QuizListComponent implements OnInit {
 
   onSelect(quiz: IQuiz) {
     this.selectedQuiz = quiz;
-    console.log("quiz with Id " + this.selectedQuiz.id + " has been selected.");
+    //console.log("quiz with Id "
+    //  + this.selectedQuiz.id
+    //  + " has been selected.");
+    //console.log(this.baseUrl);
+    //this.router.navigate(["/quiz", this.selectedQuiz.id]);
   }
 }
