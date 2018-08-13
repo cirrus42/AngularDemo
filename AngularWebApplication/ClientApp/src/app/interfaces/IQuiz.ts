@@ -1,6 +1,6 @@
 interface IQuiz {
-  id: number;
-  title: string;
-  description: string;
-  text: string;
+  Id: number;
+  Title: string;
+  Description: string;
+  Text: string;
 }

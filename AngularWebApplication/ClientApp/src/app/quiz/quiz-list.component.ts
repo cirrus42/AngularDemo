@@ -41,20 +41,15 @@ export class QuizListComponent implements OnInit {
     this.http.get<IQuiz[]>(url).subscribe(result => {
       this.quizzes = result;
     }, error => console.error(error));
-
-    debugger;
-    var x = this.quizzes;
-    console.log(this.quizzes);
   }
 
   onSelect(quiz: IQuiz) {
-    console.log(quiz);
-    console.log(quiz.id);
-    console.log(this.selectedQuiz.id);
+    this.selectedQuiz = quiz;
+
     console.log("quiz with Id "
-      + this.selectedQuiz.id
+      + this.selectedQuiz.Id
       + " has been selected.");
-    //console.log(this.baseUrl);
-    //this.router.navigate(["/quiz", this.selectedQuiz.id]);
+    console.log(this.baseUrl);
+    this.router.navigate(["/quiz", this.selectedQuiz.Id]);
   }
 }
