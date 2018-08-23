@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'quiz',
+  //selector: 'quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
