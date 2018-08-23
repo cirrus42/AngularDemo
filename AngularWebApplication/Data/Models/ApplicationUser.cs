@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AngularWebApplication.Data.Models
@@ -32,5 +33,7 @@ namespace AngularWebApplication.Data.Models
 
         [Required]
         public DateTime LastModified { get; set; }
+
+        public virtual List<Quiz> Quizzes { get; set; }
     }
 }

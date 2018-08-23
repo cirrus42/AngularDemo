@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AngularWebApplication.Data.Models
 {
@@ -12,5 +13,8 @@ namespace AngularWebApplication.Data.Models
         public int? MinValue { get; set; }
 
         public int? MaxValue { get; set; }
+
+        [ForeignKey("QuizId")]
+        public virtual Quiz Quiz { get; set; }
     }
 }
