@@ -13,7 +13,7 @@ namespace AngularWebApplication.Data.Models
 
         [Required]
         [MaxLength(128)]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         public string Email { get; set; }
@@ -29,10 +29,10 @@ namespace AngularWebApplication.Data.Models
         public int Flags { get; set; }
 
         [Required]
-        public DateTime CretedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         [Required]
-        public DateTime LastModified { get; set; }
+        public DateTime LastModifiedDate { get; set; }
 
         public virtual List<Quiz> Quizzes { get; set; }
     }
