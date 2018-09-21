@@ -26,7 +26,7 @@ export class QuizListComponent implements OnInit {
     case "latest":
     default:
       this.title = "Latest";
-      url += "Latest/";
+      url += "Latest";
       break;
     case "byTitle":
       this.title = "By Title";
